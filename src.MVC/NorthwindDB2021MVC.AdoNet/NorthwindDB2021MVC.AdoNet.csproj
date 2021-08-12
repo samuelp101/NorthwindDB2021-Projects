@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Data.SqlClient" Version="3.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\NorthwindDB2021.Data\NorthwindDB2021.Data.csproj" />
+      <ProjectReference Include="..\NorthwindDB2021.Models\NorthwindDB2021.Models.csproj" />
+    </ItemGroup>
+
+</Project>

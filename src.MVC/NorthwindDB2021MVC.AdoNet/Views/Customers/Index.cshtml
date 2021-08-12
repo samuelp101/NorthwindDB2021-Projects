@@ -1,0 +1,50 @@
+﻿@model IEnumerable<NorthwindDB2021.Models.Customer>
+
+@{ 
+    ViewData["Title"] = "Customer Listing - ADO.NET";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Customer Listing - ADO.NET</h3>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.CompanyName)</th>
+            <th>@Html.DisplayNameFor(model => model.ContactName) </th>
+            <th>@Html.DisplayNameFor(model => model.ContactTitle) </th>
+            <th>@Html.DisplayNameFor(model => model.Address) </th>
+            <th>@Html.DisplayNameFor(model => model.City) </th>
+            <th>@Html.DisplayNameFor(model => model.Region) </th>
+            <th>@Html.DisplayNameFor(model => model.PostalCode) </th>
+            <th>@Html.DisplayNameFor(model => model.Country) </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+@foreach (var item in Model)
+{
+        <tr>
+            <td>@item.CompanyName</td>
+            <td>@item.ContactName</td>
+            <td>@item.ContactTitle</td>
+            <td>@item.Address</td>
+            <td>@item.City</td>
+            <td>@item.Region</td>
+            <td>@item.PostalCode</td>
+            <td>@item.Country</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CustomerId">Edit</a>
+                <a asp-action="Details" asp-route-id="@item.CustomerId">Details</a>
+                <a asp-action="Delete" asp-route-id="@item.CustomerId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+
+</table>

@@ -11,8 +11,8 @@ namespace NorthwindDB2021.Data.Interfaces
         T GetById(int? id);
         Task<T> GetByIdAsync(int? id);
 
-        bool Insert(T obj);
-        Task<bool> InsertAsync(T obj);
+        bool Create(T obj);
+        Task<bool> CreateAsync(T obj);
 
         bool Update(T obj);
         Task<bool> UpdateAsync(T obj);

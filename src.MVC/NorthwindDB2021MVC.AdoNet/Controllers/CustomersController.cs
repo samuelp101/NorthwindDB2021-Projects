@@ -1,29 +1,24 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using NorthwindDB2021.Data.EFData;
-using NorthwindDB2021.Data.Interfaces;
+using NorthwindDB2021.Data.AdoData;
 using NorthwindDB2021.Models;
-using System.Linq;
 using System.Threading.Tasks;
 
-namespace NorthwindDB2021MVC.Repo.Controllers
+namespace NorthwindDB2021MVC.AdoNet.Controllers
 {
     public class CustomersController : Controller
     {
-        //private readonly NorthwindDB2021DbContext _context;
-        private readonly ICustomersRepository _customersRepository;
+        private readonly NorthwindDB2021AdoNetDbContext _dataContext;
 
-        public CustomersController(ICustomersRepository customersRepository)
+        public CustomersController(NorthwindDB2021AdoNetDbContext dataContext)
         {
-            //_context = context;
-            _customersRepository = customersRepository;
+            _dataContext = dataContext;
         }
 
         // GET: Customers
         public async Task<IActionResult> Index()
         {
-            //return View(await _context.Customers.ToListAsync());
-            return View(await _customersRepository.GetAllAsync());
+            return View(await _dataContext.GetAllAsync());
         }
 
         // GET: Customers/Details/5
@@ -34,13 +29,13 @@ namespace NorthwindDB2021MVC.Repo.Controllers
                 return NotFound();
             }
 
-            //var customer = await _context.Customers.FirstOrDefaultAsync(m => m.CustomerId == id);
-            var customer = await _customersRepository.GetByIdAsync(id);
+            var customer = await _dataContext.GetByIdAsync(id);
 
             if (customer == null)
             {
                 return NotFound();
             }
+
             return View(customer);
         }
 
@@ -51,18 +46,13 @@ namespace NorthwindDB2021MVC.Repo.Controllers
         }
 
         // POST: Customers/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("CustomerId,CompanyName,ContactName,ContactTitle,Address,City,Region,PostalCode,Country")] Customer customer)
         {
             if (ModelState.IsValid)
             {
-                //_context.Add(customer);
-                //await _context.SaveChangesAsync();
-                await _customersRepository.CreateAsync(customer);
-
+                await _dataContext.CreateAsync(customer);
                 return RedirectToAction(nameof(Index));
             }
             return View(customer);
@@ -76,8 +66,7 @@ namespace NorthwindDB2021MVC.Repo.Controllers
                 return NotFound();
             }
 
-            //var customer = await _context.Customers.FindAsync(id);
-            var customer = await _customersRepository.GetByIdAsync(id);
+            var customer = await _dataContext.GetByIdAsync(id);
 
             if (customer == null)
             {
@@ -87,8 +76,6 @@ namespace NorthwindDB2021MVC.Repo.Controllers
         }
 
         // POST: Customers/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("CustomerId,CompanyName,ContactName,ContactTitle,Address,City,Region,PostalCode,Country")] Customer customer)
@@ -102,9 +89,7 @@ namespace NorthwindDB2021MVC.Repo.Controllers
             {
                 try
                 {
-                    //_context.Update(customer);
-                    //await _context.SaveChangesAsync();
-                    await _customersRepository.UpdateAsync(customer);
+                    await _dataContext.UpdateAsync(customer);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -130,8 +115,7 @@ namespace NorthwindDB2021MVC.Repo.Controllers
                 return NotFound();
             }
 
-            //var customer = await _context.Customers.FirstOrDefaultAsync(m => m.CustomerId == id);
-            var customer = await _customersRepository.GetByIdAsync(id);
+            var customer = await _dataContext.GetByIdAsync(id);
 
             if (customer == null)
             {
@@ -146,19 +130,19 @@ namespace NorthwindDB2021MVC.Repo.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            //var customer = await _context.Customers.FindAsync(id);
-            //_context.Customers.Remove(customer);
-            //await _context.SaveChangesAsync();
-            var customer = await _customersRepository.GetByIdAsync(id);
-            await _customersRepository.DeleteAsync(customer);
+            var customer = await _dataContext.GetByIdAsync(id);
+
+            if (customer != null)
+            {
+                await _dataContext.DeleteAsync(id);
+            }
 
             return RedirectToAction(nameof(Index));
         }
 
         private bool CustomerExists(int id)
         {
-            //return _context.Customers.Any(e => e.CustomerId == id);
-            return (_customersRepository.GetById(id) != null);
+            return ((_dataContext.GetByIdAsync(id)) != null);
         }
     }
 }

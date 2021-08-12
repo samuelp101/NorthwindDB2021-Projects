@@ -100,7 +100,7 @@ namespace NorthwindDB2021.Data.DataServices
             }
         }
 
-        public bool Insert(Customer obj)
+        public bool Create(Customer obj)
         {
             try
             {
@@ -114,7 +114,7 @@ namespace NorthwindDB2021.Data.DataServices
             }
         }
 
-        public async Task<bool> InsertAsync(Customer obj)
+        public async Task<bool> CreateAsync(Customer obj)
         {
             try
             {

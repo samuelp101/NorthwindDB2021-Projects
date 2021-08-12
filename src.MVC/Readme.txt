@@ -7,3 +7,7 @@ Part-2:  ASP.NET Core 5.0 MVC & Entity Framework Core
 
 Part-3:  ASP.NET Core 5.0 MVC, EF Core and Repository
   - An ASP.NET Core 5.0 MVC project with Enity Framework Core, using repository pattern.
+
+Part-4:  ASP.NET Core 5.0 MVC and ADO.NET
+  - An ASP.NET Core 5.0 MVC project with raw ADO.NET
+
