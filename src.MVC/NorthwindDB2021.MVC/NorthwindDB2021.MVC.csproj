@@ -14,8 +14,8 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\NorthwindDB2021.Core\NorthwindDB2021.Core.csproj" />
       <ProjectReference Include="..\NorthwindDB2021.Data\NorthwindDB2021.Data.csproj" />
-      <ProjectReference Include="..\NorthwindDB2021.Domain\NorthwindDB2021.Domain.csproj" />
     </ItemGroup>
 
 </Project>

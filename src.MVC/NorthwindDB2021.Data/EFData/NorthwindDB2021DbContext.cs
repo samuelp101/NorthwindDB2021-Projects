@@ -1,7 +1,5 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
-using NorthwindDB2021.Domain.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using NorthwindDB2021.Core.Models;
 
 #nullable disable
 

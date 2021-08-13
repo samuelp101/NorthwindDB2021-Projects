@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using NorthwindDB2021.Core.Models;
+using NorthwindDB2021.Data.EFData;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using NorthwindDB2021.Data.EFData;
-using NorthwindDB2021.Domain.Models;
 
 namespace NorthwindDB2021.MVC.Controllers
 {

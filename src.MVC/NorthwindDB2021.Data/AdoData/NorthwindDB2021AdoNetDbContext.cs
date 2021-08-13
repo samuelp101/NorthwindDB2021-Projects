@@ -1,11 +1,9 @@
 ﻿using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
-using NorthwindDB2021.Domain.Models;
+using NorthwindDB2021.Core.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace NorthwindDB2021.Data.AdoData

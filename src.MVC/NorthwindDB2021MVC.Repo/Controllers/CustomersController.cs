@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using NorthwindDB2021.Core.Models;
 using NorthwindDB2021.Data.EFData;
 using NorthwindDB2021.Data.Interfaces;
-using NorthwindDB2021.Domain.Models;
 using System.Linq;
 using System.Threading.Tasks;
 
