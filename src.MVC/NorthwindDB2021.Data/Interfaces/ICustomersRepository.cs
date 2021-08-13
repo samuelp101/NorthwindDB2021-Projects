@@ -1,4 +1,4 @@
-﻿using NorthwindDB2021.Models;
+﻿using NorthwindDB2021.Domain.Models;
 
 namespace NorthwindDB2021.Data.Interfaces
 {

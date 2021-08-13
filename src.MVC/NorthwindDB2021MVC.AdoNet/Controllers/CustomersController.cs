@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NorthwindDB2021.Data.AdoData;
-using NorthwindDB2021.Models;
+using NorthwindDB2021.Domain.Models;
 using System.Threading.Tasks;
 
 namespace NorthwindDB2021MVC.AdoNet.Controllers

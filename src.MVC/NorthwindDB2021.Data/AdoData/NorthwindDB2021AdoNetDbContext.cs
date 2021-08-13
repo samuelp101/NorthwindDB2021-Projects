@@ -1,6 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
-using NorthwindDB2021.Models;
+using NorthwindDB2021.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;

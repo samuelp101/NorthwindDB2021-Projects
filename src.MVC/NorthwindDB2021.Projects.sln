@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthwindDB2021.MVC", "Nort
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthwindDB2021.Data", "NorthwindDB2021.Data\NorthwindDB2021.Data.csproj", "{F2C767E7-5C9B-48C3-87B2-17BAEEDCE7E4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthwindDB2021.Models", "NorthwindDB2021.Models\NorthwindDB2021.Models.csproj", "{30B65C48-1DC1-4988-A6ED-E82B64DB0D19}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7CE937FD-211F-4BA9-BB77-2CEB851345EE}"
 	ProjectSection(SolutionItems) = preProject
 		Readme.txt = Readme.txt
@@ -16,7 +14,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthwindDB2021MVC.Repo", "NorthwindDB2021MVC.Repo\NorthwindDB2021MVC.Repo.csproj", "{AD0D5D99-FCEF-49B5-9477-73D29B662B88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindDB2021MVC.AdoNet", "NorthwindDB2021MVC.AdoNet\NorthwindDB2021MVC.AdoNet.csproj", "{59508396-704B-484E-90ED-7B0ABDA056C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthwindDB2021MVC.AdoNet", "NorthwindDB2021MVC.AdoNet\NorthwindDB2021MVC.AdoNet.csproj", "{59508396-704B-484E-90ED-7B0ABDA056C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindDB2021.Domain", "NorthwindDB2021.Domain\NorthwindDB2021.Domain.csproj", "{A6BC6CB6-3DF5-4D59-B726-2D79C68996B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,10 +32,6 @@ Global
 		{F2C767E7-5C9B-48C3-87B2-17BAEEDCE7E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2C767E7-5C9B-48C3-87B2-17BAEEDCE7E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2C767E7-5C9B-48C3-87B2-17BAEEDCE7E4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{30B65C48-1DC1-4988-A6ED-E82B64DB0D19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{30B65C48-1DC1-4988-A6ED-E82B64DB0D19}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{30B65C48-1DC1-4988-A6ED-E82B64DB0D19}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{30B65C48-1DC1-4988-A6ED-E82B64DB0D19}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AD0D5D99-FCEF-49B5-9477-73D29B662B88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AD0D5D99-FCEF-49B5-9477-73D29B662B88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD0D5D99-FCEF-49B5-9477-73D29B662B88}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -44,6 +40,10 @@ Global
 		{59508396-704B-484E-90ED-7B0ABDA056C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59508396-704B-484E-90ED-7B0ABDA056C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59508396-704B-484E-90ED-7B0ABDA056C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6BC6CB6-3DF5-4D59-B726-2D79C68996B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6BC6CB6-3DF5-4D59-B726-2D79C68996B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6BC6CB6-3DF5-4D59-B726-2D79C68996B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6BC6CB6-3DF5-4D59-B726-2D79C68996B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

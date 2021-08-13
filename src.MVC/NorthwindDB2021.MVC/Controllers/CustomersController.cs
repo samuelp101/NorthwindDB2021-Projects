@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using NorthwindDB2021.Data.EFData;
-using NorthwindDB2021.Models;
+using NorthwindDB2021.Domain.Models;
 
 namespace NorthwindDB2021.MVC.Controllers
 {

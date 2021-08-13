@@ -9,7 +9,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\NorthwindDB2021.Models\NorthwindDB2021.Models.csproj" />
+      <ProjectReference Include="..\NorthwindDB2021.Domain\NorthwindDB2021.Domain.csproj" />
     </ItemGroup>
 
 </Project>

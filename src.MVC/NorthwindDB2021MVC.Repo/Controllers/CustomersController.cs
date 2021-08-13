@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using NorthwindDB2021.Data.EFData;
 using NorthwindDB2021.Data.Interfaces;
-using NorthwindDB2021.Models;
+using NorthwindDB2021.Domain.Models;
 using System.Linq;
 using System.Threading.Tasks;
 
