@@ -1,9 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NorthwindDB2021.Core.Models;
-using NorthwindDB2021.Data.EFData;
 using NorthwindDB2021.Data.Interfaces;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace NorthwindDB2021MVC.Repo.Controllers
