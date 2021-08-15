@@ -6,8 +6,8 @@ namespace NorthwindDB2021.Core.Models
     {
         public Customer()
         {
-            CustomerCustomerDemos = new HashSet<CustomerCustomerDemo>();
-            Orders = new HashSet<Order>();
+            //CustomerCustomerDemos = new HashSet<CustomerCustomerDemo>();
+            //Orders = new HashSet<Order>();
         }
 
         public int CustomerId { get; set; }
@@ -20,7 +20,7 @@ namespace NorthwindDB2021.Core.Models
         public string PostalCode { get; set; }
         public string Country { get; set; }
 
-        public virtual ICollection<CustomerCustomerDemo> CustomerCustomerDemos { get; set; }
-        public virtual ICollection<Order> Orders { get; set; }
+        //public virtual ICollection<CustomerCustomerDemo> CustomerCustomerDemos { get; set; }
+        //public virtual ICollection<Order> Orders { get; set; }
     }
 }

@@ -16,7 +16,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthwindDB2021MVC.Repo", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthwindDB2021MVC.AdoNet", "NorthwindDB2021MVC.AdoNet\NorthwindDB2021MVC.AdoNet.csproj", "{59508396-704B-484E-90ED-7B0ABDA056C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindDB2021.Core", "NorthwindDB2021.Core\NorthwindDB2021.Core.csproj", "{0C2D1648-343F-4661-B713-47DBAB1A4CBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthwindDB2021.Core", "NorthwindDB2021.Core\NorthwindDB2021.Core.csproj", "{0C2D1648-343F-4661-B713-47DBAB1A4CBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindDB2021MVC.AdoORM", "NorthwindDB2021MVC.AdoORM\NorthwindDB2021MVC.AdoORM.csproj", "{5B3073E9-396B-4470-88A0-21AF2F0E6D6D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +46,10 @@ Global
 		{0C2D1648-343F-4661-B713-47DBAB1A4CBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C2D1648-343F-4661-B713-47DBAB1A4CBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C2D1648-343F-4661-B713-47DBAB1A4CBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B3073E9-396B-4470-88A0-21AF2F0E6D6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B3073E9-396B-4470-88A0-21AF2F0E6D6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B3073E9-396B-4470-88A0-21AF2F0E6D6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B3073E9-396B-4470-88A0-21AF2F0E6D6D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

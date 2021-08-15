@@ -191,12 +191,6 @@ namespace NorthwindDB2021.Data.EFData
                     .HasColumnName("CustomerTypeID")
                     .IsFixedLength(true);
 
-                entity.HasOne(d => d.Customer)
-                    .WithMany(p => p.CustomerCustomerDemos)
-                    .HasForeignKey(d => d.CustomerId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_CustomerCustomerDemo_Customers");
-
                 entity.HasOne(d => d.CustomerType)
                     .WithMany(p => p.CustomerCustomerDemos)
                     .HasForeignKey(d => d.CustomerTypeId)
@@ -399,11 +393,6 @@ namespace NorthwindDB2021.Data.EFData
                 entity.Property(e => e.ShipRegion).HasMaxLength(15);
 
                 entity.Property(e => e.ShippedDate).HasColumnType("datetime");
-
-                entity.HasOne(d => d.Customer)
-                    .WithMany(p => p.Orders)
-                    .HasForeignKey(d => d.CustomerId)
-                    .HasConstraintName("FK_Orders_Customers");
 
                 entity.HasOne(d => d.Employee)
                     .WithMany(p => p.Orders)
