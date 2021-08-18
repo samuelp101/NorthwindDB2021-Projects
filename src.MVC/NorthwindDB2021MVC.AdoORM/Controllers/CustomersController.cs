@@ -18,6 +18,7 @@ namespace NorthwindDB2021MVC.AdoORM.Controllers
         // GET: Customers
         public async Task<IActionResult> Index()
         {
+            //return View(_dataContext.GetAll());
             return View(await _dataContext.GetAllAsync());
         }
 
@@ -29,6 +30,7 @@ namespace NorthwindDB2021MVC.AdoORM.Controllers
                 return NotFound();
             }
 
+            //var customer = _dataContext.GetById(id);
             var customer = await _dataContext.GetByIdAsync(id);
 
             if (customer == null)
@@ -52,8 +54,13 @@ namespace NorthwindDB2021MVC.AdoORM.Controllers
         {
             if (ModelState.IsValid)
             {
-                await _dataContext.CreateAsync(customer);
-                return RedirectToAction(nameof(Index));
+                //_dataContext.Create(customer);
+                var result = await _dataContext.CreateAsync(customer);
+
+                if (result == 1)
+                {
+                    return RedirectToAction(nameof(Index));
+                }                
             }
             return View(customer);
         }
@@ -89,6 +96,7 @@ namespace NorthwindDB2021MVC.AdoORM.Controllers
             {
                 try
                 {
+                    //_dataContext.Update(customer);
                     await _dataContext.UpdateAsync(customer);
                 }
                 catch (DbUpdateConcurrencyException)
@@ -115,6 +123,7 @@ namespace NorthwindDB2021MVC.AdoORM.Controllers
                 return NotFound();
             }
 
+            //var customer = _dataContext.GetById(id);
             var customer = await _dataContext.GetByIdAsync(id);
 
             if (customer == null)
@@ -134,6 +143,7 @@ namespace NorthwindDB2021MVC.AdoORM.Controllers
 
             if (customer != null)
             {
+                //_dataContext.Delete(id);
                 await _dataContext.DeleteAsync(id);
             }
 

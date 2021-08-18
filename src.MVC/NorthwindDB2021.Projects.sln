@@ -18,7 +18,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthwindDB2021MVC.AdoNet",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthwindDB2021.Core", "NorthwindDB2021.Core\NorthwindDB2021.Core.csproj", "{0C2D1648-343F-4661-B713-47DBAB1A4CBB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindDB2021MVC.AdoORM", "NorthwindDB2021MVC.AdoORM\NorthwindDB2021MVC.AdoORM.csproj", "{5B3073E9-396B-4470-88A0-21AF2F0E6D6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NorthwindDB2021MVC.AdoORM", "NorthwindDB2021MVC.AdoORM\NorthwindDB2021MVC.AdoORM.csproj", "{5B3073E9-396B-4470-88A0-21AF2F0E6D6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore101.ORM", "DotNetCore101.ORM\DotNetCore101.ORM.csproj", "{971262DD-2359-4073-9D44-5F3C6731D1CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,6 +52,10 @@ Global
 		{5B3073E9-396B-4470-88A0-21AF2F0E6D6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B3073E9-396B-4470-88A0-21AF2F0E6D6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B3073E9-396B-4470-88A0-21AF2F0E6D6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{971262DD-2359-4073-9D44-5F3C6731D1CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{971262DD-2359-4073-9D44-5F3C6731D1CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{971262DD-2359-4073-9D44-5F3C6731D1CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{971262DD-2359-4073-9D44-5F3C6731D1CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

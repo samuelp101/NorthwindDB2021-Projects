@@ -9,6 +9,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\DotNetCore101.ORM\DotNetCore101.ORM.csproj" />
       <ProjectReference Include="..\NorthwindDB2021.Core\NorthwindDB2021.Core.csproj" />
     </ItemGroup>
 
