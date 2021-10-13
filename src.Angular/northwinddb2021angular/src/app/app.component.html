@@ -1,0 +1,14 @@
+<div style='width:90%;margin:auto;'>
+  <h1>{{title}}</h1>
+
+  <table class='table table-bordered'>
+    <tr *ngFor='let customer of customers'>
+      <td>{{customer.companyName}}</td>
+      <td>{{customer.contactName}}</td>
+      <td>{{customer.contactTitle}}</td>
+      <td>{{customer.city}}</td>
+      <td>{{customer.region}}</td>
+      <td>{{customer.country}}</td>
+    </tr>
+  </table>
+</div>

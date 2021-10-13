@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using NorthwindDB2021.Core.Models;
 using NorthwindDB2021.Data.AdoData;
+using System;
 using System.Threading.Tasks;
 
 namespace NorthwindDB2021MVC.AdoORM.Controllers
@@ -30,10 +31,21 @@ namespace NorthwindDB2021MVC.AdoORM.Controllers
                 return NotFound();
             }
 
-            //var customer = _dataContext.GetById(id);
-            var customer = await _dataContext.GetByIdAsync(id);
+      //var customer = _dataContext.GetById(id);
+      //var customer = await _dataContext.GetByIdAsync(id);
+      //Customer customer = await _dataContext.GetByIdAsync(id);
 
-            if (customer == null)
+      //(T)Activator.CreateInstance(typeof(T), lstArgument)
+      Customer customer = (Customer)Activator.CreateInstance(typeof(Customer));
+      customer.CompanyName = "E101";
+      customer.ContactName = "Sam Phung";
+      customer.ContactTitle = "PM";
+      customer.Address = "123 Any Street";
+      customer.City = "LA";
+      customer.Region = "CA";
+      customer.Country = "USA";
+
+      if (customer == null)
             {
                 return NotFound();
             }

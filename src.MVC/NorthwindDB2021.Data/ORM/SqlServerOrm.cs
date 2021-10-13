@@ -5,9 +5,9 @@ using System.Data;
 using System.Reflection;
 using System.Threading.Tasks;
 
-namespace DotNetCore101.ORM
+namespace NorthwindDB2021.Data.ORM
 {
-  public static class SqlServerORM
+  public static class SqlServerOrm
   {
     public static T MapSqlDataReader<T>(this T obj, SqlDataReader rdr, string version = "none")
     {
@@ -107,36 +107,6 @@ namespace DotNetCore101.ORM
       return obj;
     }
 
-    //public static List<T> MapSqlCommandList<T>(this SqlCommand cmd)
-    //{
-    //    var list = new List<T>();
-
-    //    using (SqlDataReader reader = cmd.ExecuteReader())
-    //    {
-    //        while (reader.Read())
-    //        {
-    //            var item = GetObject<T>();
-    //            list.Add(item.MapSqlDataReader<T>(reader));
-    //        }
-    //    }
-    //    return list;
-    //}
-
-    //public static async Task<List<T>> MapSqlCommandListAsync<T>(this SqlCommand cmd)
-    //{
-    //    var list = new List<T>();
-
-    //    using (SqlDataReader reader = await cmd.ExecuteReaderAsync())
-    //    {
-    //        while (await reader.ReadAsync())
-    //        {
-    //            var item = GetObject<T>();
-    //            list.Add(item.MapSqlDataReader<T>(reader));
-    //        }
-    //    }
-    //    return list;
-    //}
-
     public static List<T> MapSqlQueryList<T>(this List<T> list, string connectionString, string sql, CommandType commandType)
     {
       using (SqlConnection connection = new SqlConnection(connectionString))
@@ -149,7 +119,7 @@ namespace DotNetCore101.ORM
           {
             while (reader.Read())
             {
-              var item = GetObject<T>();
+              T item = GetObject<T>();
               list.Add(item.MapSqlDataReader<T>(reader));
             }
           }
@@ -170,7 +140,7 @@ namespace DotNetCore101.ORM
           {
             while (await reader.ReadAsync())
             {
-              var item = GetObject<T>();
+              T item = GetObject<T>();
               list.Add(item.MapSqlDataReader<T>(reader));
             }
           }
